@@ -60,6 +60,7 @@ else {
 }
 
 let thumbnails = document.querySelectorAll('.thumbnail');
+thumbnails[index].setAttribute('class', 'thumbnail highlight');
 
 right.onclick = () => {
     let newSrc;
@@ -69,8 +70,8 @@ right.onclick = () => {
     if (index === images.length - 1) {
         index = 0;
         newTitle = images[index].title;
-        title.innerText = newTitle;
         newDescription = images[index].description;
+        title.innerText = newTitle;
         description.innerText = newDescription;
         newSrc = thumbnails[index].getAttribute('src');
         thumbnails[images.length - 1].setAttribute('class', 'thumbnail');
