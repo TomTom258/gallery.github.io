@@ -41,10 +41,21 @@ if (images.length > 5) {
 
     for (i = 0; i < 4; i++) {
         let newImg = document.createElement('img');
+        let newTitle = images[i].title;
+        let newDescription = images[i].description;
 
         newImg.setAttribute('src', images[i].src);
         newImg.setAttribute('class', 'thumbnail');
         preview.appendChild(newImg);
+        newImg.onclick = () => {
+            background.style.backgroundImage = `url("${newImg.src}")`;
+            title.innerText = newTitle;
+            description.innerText = newDescription;
+            thumbnails.forEach((element) => {
+                element.setAttribute('class', 'thumbnail');
+            })
+            newImg.setAttribute('class', 'thumbnail highlight');
+        }
     }
 }
 
@@ -52,10 +63,21 @@ else {
     
     for (i = 0; i < images.length; i++) {
         let newImg = document.createElement('img');
+        let newTitle = images[i].title;
+        let newDescription = images[i].description;
 
         newImg.setAttribute('src', images[i].src);
         newImg.setAttribute('class', 'thumbnail');
         preview.appendChild(newImg);
+        newImg.onclick = () => {
+            background.style.backgroundImage = `url("${newImg.src}")`;
+            title.innerText = newTitle;
+            description.innerText = newDescription;
+            thumbnails.forEach((element) => {
+                element.setAttribute('class', 'thumbnail');
+            })
+            newImg.setAttribute('class', 'thumbnail highlight');
+        }
     } 
 }
 
