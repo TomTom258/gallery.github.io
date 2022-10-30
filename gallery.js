@@ -43,11 +43,13 @@ if (images.length > 5) {
         let newImg = document.createElement('img');
         let newTitle = images[i].title;
         let newDescription = images[i].description;
+        let newIndex = i;
 
         newImg.setAttribute('src', images[i].src);
         newImg.setAttribute('class', 'thumbnail');
         preview.appendChild(newImg);
         newImg.onclick = () => {
+            index = newIndex;
             background.style.backgroundImage = `url("${newImg.src}")`;
             title.innerText = newTitle;
             description.innerText = newDescription;
@@ -65,11 +67,13 @@ else {
         let newImg = document.createElement('img');
         let newTitle = images[i].title;
         let newDescription = images[i].description;
+        let newIndex = i;
 
         newImg.setAttribute('src', images[i].src);
         newImg.setAttribute('class', 'thumbnail');
         preview.appendChild(newImg);
         newImg.onclick = () => {
+            index = newIndex;
             background.style.backgroundImage = `url("${newImg.src}")`;
             title.innerText = newTitle;
             description.innerText = newDescription;
